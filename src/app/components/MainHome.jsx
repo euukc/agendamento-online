@@ -3,8 +3,8 @@ import Link from "next/link"
 export default function MainHome(){
     return (
         <main>
-            <div className="flex flex-col justify-center items-center text-center mb-[77px]">
-                <h1 className="text-[32px] md:text-[40px] mb-[19px] font-extrabold">Bem-vindos à Esmalteria Eduarda Dias</h1>
+            <div className="flex flex-col justify-center items-center text-center mb-[40px]">
+                <h1 className="text-[32px] md:text-[40px] mb-[19px] font-extrabold px-[30px]">Bem-vindos à Esmalteria Eduarda Dias</h1>
                 <p className="text-[#7A7A7A] md:text-[16px] px-[20px]">Mime-se com um momento só seu. Agende seu horário e relaxe!</p>
             </div>
             <div className="flex justify-end md:justify-center pr-8">
