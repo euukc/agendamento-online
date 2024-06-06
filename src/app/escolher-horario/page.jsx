@@ -46,11 +46,9 @@ export default function escolherHorario() {
                 </div>
                 <div className="flex justify-center md:justify-center">
                 <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[120px] font-extrabold mt-[20px]">
-                    <Link href="/">Agendar</Link>
+                    <Link href="/escolher-horario">Agendar</Link>
                 </button>
-            </div>
-
-            
+            </div>            
             </header>
         </main>
     );
