@@ -9,7 +9,7 @@ import MainHome from './components/MainHome';
 const HomePage = () => {
 
   return (
-    <main className='w-full h-min-full flex flex-col mt-10'>
+    <main className='w-full h-min-full flex flex-col my-[50px] '>
       <HeaderHome />
       <MainHome />
 
