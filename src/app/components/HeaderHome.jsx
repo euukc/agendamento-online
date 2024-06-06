@@ -8,7 +8,7 @@ export default function HeaderHome() {
                 className=''
                 src="/woman-meditating.png"
                 alt="Mulher meditando"
-                width={300}
+                width={250}
                 height={200}
             />
         </header>
