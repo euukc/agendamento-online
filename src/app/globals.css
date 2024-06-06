@@ -6,21 +6,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: white;
 }
 
 
-.main-container {  
-  background-color: rgb(220, 187, 252);
-  
-}
 
 
 @media(max-width: 574px) {
-  body {
-    width: 100%;
-    height: 100vh;
-   
-
-  }
+  
 
 }

@@ -12,8 +12,9 @@ const CalendarComponent = () => {
     };
   
     return (
-      <div className="w-full lg:h-[900px] flex justify-start flex-col items-center gap-4">        
-        <div>
+      <div className="w-full lg:h-[900px] flex justify-start flex-col items-center gap-4">  
+            
+        {/* <div>
             <Calendar onChange={onChange} value={date}/>  
         </div>
         <div className="flex flex-col w-[330px]">
@@ -56,7 +57,7 @@ const CalendarComponent = () => {
 
         <button className="border-2 rounded-lg p-2 w-[200px] bg-gradient-to-r from-[#867BEE] to-[#E1DAFF] my-8"> 
             CONFERIR
-        </button>
+        </button> */}
               
       </div>
       
