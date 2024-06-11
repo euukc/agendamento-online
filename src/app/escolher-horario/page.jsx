@@ -34,8 +34,8 @@ export default function escolherHorario() {
                         locale="pt-BR"
                         className="border-transparent rounded-2xl p-4 m-2 shadow-md shadow-[#FDCCC5]" />
                 </div>
-                <div className="flex flex-col w-full justify-center items-center mt-[30px]">
-                    <label className="text-[#867BEE] text-[12px] flex justify-start" htmlFor="text">Horários Disponíveis:</label>
+                <div className="flex flex-col w-full items-center mt-[30px]">
+                    <label className="text-[#867BEE] text-[12px] flex" htmlFor="text">Horários Disponíveis:</label>
                     <select className="bg-[#E1DAFF] w-[230px] rounded-[8px]" name="time" id="time">
                         <option value="08:00">08:00</option>
                         <option value="09:00">09:00</option>
