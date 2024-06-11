@@ -12,7 +12,7 @@ export default function MainHome(){
             </div>
             <div className="flex justify-end md:justify-center pr-8">
                 <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[149px] font-extrabold">
-                    <Link href="/escolher-horario">Agendar</Link>
+                    <Link href="/escolher-horario">Próximo</Link>
                 </button>
             </div>
         </main>
