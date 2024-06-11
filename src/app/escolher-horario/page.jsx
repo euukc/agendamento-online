@@ -6,9 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 
-
-
-export default function escolherHorario() {
+export default function EscolherHorario() {
     const [date, setDate] = useState(new Date());
 
     const onChange = (newDate) => {
