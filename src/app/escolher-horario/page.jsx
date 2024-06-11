@@ -5,6 +5,9 @@ import Calendar from "react-calendar";
 import { useState } from "react";
 import Link from "next/link";
 
+
+
+
 export default function escolherHorario() {
     const [date, setDate] = useState(new Date());
 
@@ -28,6 +31,7 @@ export default function escolherHorario() {
                     <Calendar
                         onChange={onChange}
                         value={date}
+                        locale="pt-BR"
                         className="border-transparent rounded-2xl p-4 m-2 shadow-md shadow-[#FDCCC5]" />
                 </div>
                 <div className="flex flex-col w-full justify-center items-center mt-[30px]">
@@ -45,10 +49,13 @@ export default function escolherHorario() {
                     </select>
                 </div>
                 <div className="flex justify-center md:justify-center">
-                <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[120px] font-extrabold mt-[20px]">
-                    <Link href="/escolher-horario">Agendar</Link>
-                </button>
-            </div>            
+                    
+                    <Link href="/escolher-horario">
+                        <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[120px] font-extrabold mt-[20px]">
+                            Agendar
+                        </button>
+                    </Link>
+                </div>
             </header>
         </main>
     );
