@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import Calendar from "react-calendar";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -27,32 +26,40 @@ export default function EscolherHorario() {
                 </div>
             </header>
 
-            <div className="flex justify-center gap-10 md:gap-32 flex-wrap items-center w-full mt-[40px] md:mt-[100px] text-[13px] ">
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col">
-                    <img src="/unhas.png" alt="Foto de Unhas" />
-                    <p> Unhas </p>
+            <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col md:gap-8">
+                    <img src="/unhas-fibra-vidro.jpg" alt="Foto de Unhas" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg"/>
+                    <p className="md:text-[15px]"><strong>Unhas - Fibra de Vidro</strong></p>
                 </div>
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col">
-                    <img src="/sobrancelha.png" alt="Foto de sobrancelha" />
-                    <p> Sobrancelha</p>
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                    <img src="/manutencao-fibra.jpg" alt="Foto de Manutencao da Fibra" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
+                    <p className="md:text-[15px]"> <strong>Manutenção Fibra</strong></p>
                 </div>
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col">
-                    <img src="/sobrancelha.png" alt="Foto de Sobrancelha" />
-                    <p>Massagem</p>
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                    <img src="/banho-de-gel.jpg" alt="" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
+                    <p className="md:text-[15px]"><strong>Banho<br></br>de Gel</strong></p>
                 </div>
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col">
-                    <img src="/corte.png" alt="Foto de Corte" />
-                    <p>Corte</p>
-                </div>                
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                    <img src="/manutencao-banho.jpg" alt="" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
+                    <p className="md:text-[15px]"><strong>Manutenção Banho de Gel</strong></p>
+                </div>
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                    <img src="esmaltacao-gel-maos.jfif" alt="" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
+                    <p className="md:text-[15px]"><strong>Esmaltação em Gel - Mãos</strong></p>
+                </div>
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                    <img src="esmaltacao-gel-pes.jpg" alt="" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
+                    <p className="md:text-[15px]"><strong>Esmaltação em Gel - Pés</strong></p>
+                </div>
             </div>
 
-            <div className="flex justify-center md:justify-center mt-[40px] md:mt-[100px]">
+            <div className="flex justify-center md:justify-center mt-[40px] md:mt-[100px] mb-[50px]">
                 <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[149px] font-extrabold">
-                    <Link href="/escolher-servico">Próximo</Link>
+                    <Link href="/escolher-profissional">Próximo</Link>
                 </button>
-                </div>
+            </div>
 
-            
+
         </main>
     );
 }
