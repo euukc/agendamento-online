@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 
+
 export default function EscolherHorario() {
     const [date, setDate] = useState(new Date());
 
@@ -30,7 +31,8 @@ export default function EscolherHorario() {
                         onChange={onChange}
                         value={date}
                         locale="pt-BR"
-                        className="border-transparent rounded-2xl p-4 m-2 shadow-md shadow-[#FDCCC5]" />
+                        className="border-transparent rounded-2xl p-4 m-2 shadow-md shadow-[#FDCCC5]"
+                    />
                 </div>
                 <div className="flex flex-col w-full items-center mt-[30px]">
                     <label className="text-[#867BEE] text-[12px] flex" htmlFor="text">Horários Disponíveis:</label>
@@ -47,9 +49,9 @@ export default function EscolherHorario() {
                     </select>
                 </div>
                 <div className="flex justify-center md:justify-center">
-                <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[149px] font-extrabold mt-[20px]">
-                    <Link href="/escolher-servico">Próximo</Link>
-                </button>
+                    <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[149px] font-extrabold mt-[20px]">
+                        <Link href="/escolher-servico">Próximo</Link>
+                    </button>
                 </div>
             </header>
         </main>

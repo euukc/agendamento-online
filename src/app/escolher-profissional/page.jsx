@@ -66,10 +66,17 @@ export default function EscolherHorario() {
                 
             </div>
 
-            <div className="flex justify-center md:justify-center mt-[40px] md:mt-[100px] mb-[50px]">
-                <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[149px] font-extrabold">
-                    <Link href="/confirmar-agendamento">Próximo</Link>
-                </button>
+            <div className="flex justify-center md:justify-center mt-[40px] md:mt-[100px] mb-[50px] gap-6 md:gap-[100px]">
+            <div className="w-[50%] flex justify-end mt-[40px] md:mt-[100px] mb-[50px]">
+                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#867BEE] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
+                        <Link href="/escolher-servico">Voltar</Link>
+                    </button>
+                </div>
+                <div className="w-[50%] flex justify-start mt-[40px] md:mt-[100px] mb-[50px]">
+                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
+                        <Link href="/confirmar-agendamento">Próximo</Link>
+                    </button>
+                </div>
             </div>
 
 

@@ -1,16 +1,10 @@
-"use client"
+// pages/confirmar-agendamento.js
 
 import Image from "next/image";
-import { useState } from "react";
 import Link from "next/link";
 
+export default function ConfirmarAgendamento() {
 
-export default function EscolherHorario() {
-    const [date, setDate] = useState(new Date());
-
-    const onChange = (newDate) => {
-        setDate(newDate);
-    };
 
     return (
         <main className="w-full h-min-screen flex flex-col justify-center mt-10">
@@ -32,18 +26,18 @@ export default function EscolherHorario() {
                         <strong>Serviço escolhido</strong>
                     </span>
                     <span>Profissional escolhido</span>
-                    <span>Dia e Hora</span>
-                </div>
 
+                    <span>Dia e Hora: às </span>
+                </div>
             </div>
-            <div className="flex justify-center items-center mx-[20px] gap-4">
+            <div className="flex justify-center items-center mx-[20px] gap-4 md:gap-[100px]">
                 <div className="w-[50%] flex justify-end mt-[40px] md:mt-[100px] mb-[50px]">
-                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[200px] md:h-[200px] text-[13px] md:text-[30px] font-extrabold">
+                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#867BEE] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
                         <Link href="/escolher-profissional">Voltar</Link>
                     </button>
                 </div>
                 <div className="w-[50%] flex justify-start mt-[40px] md:mt-[100px] mb-[50px]">
-                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] text-[13px] font-extrabold">
+                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
                         <Link href="/escolher-profissional">Agendar</Link>
                     </button>
                 </div>
