@@ -33,7 +33,14 @@ export default function ConfirmarAgendamento() {
     }, []);
 
     const agendamentoConfirmado = () => {
+        if (setProfissional === '' || setDate === '' || setTime === '' || setService === ''){
+            alert('Há informações não escolhidos. Por favor, verifique seu agendamento!')
+        } else
         alert('Agendamento Confirmado!')
+        setProfissional('');
+        setDate('');
+        setTime('');
+        setService('');
     }
 
     return (
