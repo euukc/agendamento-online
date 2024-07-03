@@ -4,19 +4,19 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
-
 export default function EscolherProfissional() {
     const [date, setDate] = useState(new Date());
 
     const onChange = (newDate) => {
         setDate(newDate);
-
     };
 
     const [profissional, setProfissional] = useState('');
+    const [selectedProfissional, setSelectedProfissional] = useState('');
 
     const profissionalSelected = (value) => {
         setProfissional(value);
+        setSelectedProfissional(value); 
         localStorage.setItem('profissional', value);
     };
 
@@ -35,31 +35,30 @@ export default function EscolherProfissional() {
             </header>
 
             <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
-                <div className="w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer"
+                <div className={`w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer ${selectedProfissional === 'Eduarda Dias' ? 'border-4 border-[#867BEE] p-[0.5px] rounded-xl' : ''}`}
                     onClick={() => profissionalSelected('Eduarda Dias')}>
                     <img src="/manicure.png" alt="Foto de Unhas" className="w-[100px] h-[100px] md:w-[150px] md:h-[200px] rounded-lg" />
-                    <div className="w-full flex flex-col  justify-end text-justify">
+                    <div className="w-full flex flex-col justify-end text-justify">
                         <p className="text-[15px] md:text-[15px]"><strong>Eduarda Dias</strong></p>
                         <p className="text-[13px] md:text-[15px]">Manicure Pé e Mão</p>
                     </div>
                 </div>
-                <div className="w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer"
+                <div className={`w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer ${selectedProfissional === 'Rafaela' ? 'border-4 border-[#867BEE] p-[0.5px] rounded-xl' : ''}`}
                     onClick={() => profissionalSelected('Rafaela')}>
                     <img src="/manicure.png" alt="Foto de Unhas" className="w-[100px] h-[100px] md:w-[200px] md:h-[200px] rounded-lg" />
-                    <div className="w-full flex flex-col  justify-end text-justify">
+                    <div className="w-full flex flex-col justify-end text-justify">
                         <p className="text-[15px] md:text-[15px]"><strong>Rafaela</strong></p>
                         <p className="text-[13px] md:text-[15px]">Manicure Pé e Mão</p>
                     </div>
                 </div>
-                <div className="w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer"
+                <div className={`w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer ${selectedProfissional === 'Larissa' ? 'border-4 border-[#867BEE] p-[0.5px] rounded-xl' : ''}`}
                     onClick={() => profissionalSelected('Larissa')}>
                     <img src="/manicure.png" alt="Foto de Unhas" className="w-[100px] h-[100px] md:w-[150px] md:h-[200px] rounded-lg" />
-                    <div className="w-full flex flex-col  justify-end text-justify">
+                    <div className="w-full flex flex-col justify-end text-justify">
                         <p className="text-[15px] md:text-[15px]"><strong>Larissa</strong></p>
                         <p className="text-[13px] md:text-[15px]">Manicure Pé e Mão</p>
                     </div>
                 </div>
-
             </div>
 
             <div className="flex justify-center md:justify-center mt-[40px] md:mt-[100px] mb-[50px] gap-6 md:gap-[100px]">
@@ -74,8 +73,6 @@ export default function EscolherProfissional() {
                     </button>
                 </div>
             </div>
-
-
         </main>
     );
 }

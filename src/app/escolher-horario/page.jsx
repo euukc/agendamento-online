@@ -15,7 +15,7 @@ export default function EscolherHorario() {
         localStorage.setItem('date', newDate.toISOString());
     };
 
-    const [time, setTime] = useState('08:00');
+    const [time, setTime] = useState('');
 
     const chooseTime = (event) => {
         const selectedTime = event.target.value;

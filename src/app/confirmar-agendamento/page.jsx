@@ -65,11 +65,11 @@ export default function ConfirmarAgendamento() {
                 <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
                     <div className="w-ful flex flex-col ml-[10px] justify-center items-center text-[20px]">
                         <span>
-                            <strong>Serviço escolhido: {service || 'Nenhum serviço selecionado'} </strong>
+                            <strong>Serviço escolhido: {service} </strong>
                         </span>
-                        <span>Profissional escolhido: {profissional || 'Nenhum profissional selecionado'}</span>
+                        <span>Profissional escolhido: {profissional}</span>
 
-                        <span>Dia e Hora: {date || 'Nenhuma data selecionada'} - {time || 'Nenhum horário selecionado'} </span>
+                        <span>Dia e Hora: {date} - {time} </span>
                     </div>
                 </div>
                 <div className="flex justify-center items-center mx-[20px] gap-4 md:gap-[100px]">
