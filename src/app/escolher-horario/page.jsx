@@ -12,7 +12,16 @@ export default function EscolherHorario() {
 
     const onChange = (newDate) => {
         setDate(newDate);
+        localStorage.setItem('date', newDate.toISOString());
     };
+
+    const [time, setTime] = useState('');
+
+    const chooseTime = (event) => {
+        const selectedTime = event.target.value;
+        setTime(selectedTime);
+        localStorage.setItem('time', selectedTime);
+    }
 
     return (
         <main className="w-full h-[300px] md:h-[300px] flex justify-center mt-10">
@@ -36,7 +45,7 @@ export default function EscolherHorario() {
                 </div>
                 <div className="flex flex-col w-full items-center mt-[30px]">
                     <label className="text-[#867BEE] text-[12px] flex" htmlFor="text">Horários Disponíveis:</label>
-                    <select className="bg-[#E1DAFF] w-[230px] rounded-[8px]" name="time" id="time">
+                    <select className="bg-[#E1DAFF] w-[230px] rounded-[8px]" name="time" id="time" onChange={chooseTime}>
                         <option value="08:00">08:00</option>
                         <option value="09:00">09:00</option>
                         <option value="10:00">10:00</option>

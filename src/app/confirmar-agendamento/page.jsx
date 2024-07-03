@@ -1,10 +1,40 @@
 // pages/confirmar-agendamento.js
+"use client"
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function ConfirmarAgendamento() {
+    const [profissional, setProfissional] = useState('');
+    const [date, setDate] = useState('');
+    const [time, setTime] = useState('');
+    const [service, setService] = useState('');
 
+    useEffect(() => {      
+
+        const storedProfissional = localStorage.getItem('profissional');
+        const storedDate = localStorage.getItem('date');
+        const storedTime = localStorage.getItem('time');
+        const storedService = localStorage.getItem('service');
+
+        if (storedProfissional) {
+            setProfissional(storedProfissional);
+        }
+        if (storedDate) {
+            setDate(new Date(storedDate).toLocaleDateString('pt-BR'));
+        }
+        if (storedTime) {
+            setTime(storedTime);
+        }
+        if (storedService) {
+            setService(storedService);
+        }
+    }, []);
+
+    const agendamentoConfirmado = () => {
+        alert('Agendamento Confirmado!')
+    }
 
     return (
         <main className="w-full h-min-screen flex flex-col justify-center mt-10">
@@ -23,11 +53,11 @@ export default function ConfirmarAgendamento() {
             <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
                 <div className="w-ful flex flex-col ml-[10px] justify-center items-center text-[20px]">
                     <span>
-                        <strong>Serviço escolhido</strong>
+                        <strong>Serviço escolhido: {service || 'Nenhum serviço selecionado'} </strong>
                     </span>
-                    <span>Profissional escolhido</span>
+                    <span>Profissional escolhido: {profissional || 'Nenhum profissional selecionado'}</span>
 
-                    <span>Dia e Hora: às </span>
+                    <span>Dia e Hora: {date || 'Nenhuma data selecionada'} - {time || 'Nenhum horário selecionado'} </span>
                 </div>
             </div>
             <div className="flex justify-center items-center mx-[20px] gap-4 md:gap-[100px]">
@@ -37,8 +67,9 @@ export default function ConfirmarAgendamento() {
                     </button>
                 </div>
                 <div className="w-[50%] flex justify-start mt-[40px] md:mt-[100px] mb-[50px]">
-                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
-                        <Link href="/escolher-profissional">Agendar</Link>
+                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold"
+                    onClick={agendamentoConfirmado}>
+                         Agendar
                     </button>
                 </div>
             </div>

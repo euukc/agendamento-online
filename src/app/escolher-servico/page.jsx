@@ -5,12 +5,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 
-export default function EscolherHorario() {
-    const [date, setDate] = useState(new Date());
+export default function EscolherServiço() {
+    
+    const [service, setService] = useState('');
 
-    const onChange = (newDate) => {
-        setDate(newDate);
-    };
+    const serviceSelected = (selectedService) => {
+        setService(selectedService);
+        localStorage.setItem('service', selectedService);
+    }
 
     return (
         <main className="w-full h-min-screen flex flex-col justify-center mt-10">
@@ -27,27 +29,28 @@ export default function EscolherHorario() {
             </header>
 
             <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col md:gap-8">
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col md:gap-8 cursor-pointer"
+                onClick={() => serviceSelected('Unhas - Fibra de Vidro')}>
                     <img src="/unhas-fibra-vidro.jpg" alt="Foto de Unhas" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg"/>
                     <p className="md:text-[15px]"><strong>Unhas - Fibra de Vidro</strong></p>
                 </div>
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer">
                     <img src="/manutencao-fibra.jpg" alt="Foto de Manutencao da Fibra" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
                     <p className="md:text-[15px]"> <strong>Manutenção Fibra</strong></p>
                 </div>
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer">
                     <img src="/banho-de-gel.jpg" alt="" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
                     <p className="md:text-[15px]"><strong>Banho<br></br>de Gel</strong></p>
                 </div>
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer">
                     <img src="/manutencao-banho.jpg" alt="" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
                     <p className="md:text-[15px]"><strong>Manutenção Banho de Gel</strong></p>
                 </div>
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer">
                     <img src="esmaltacao-gel-maos.jfif" alt="" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
                     <p className="md:text-[15px]"><strong>Esmaltação em Gel - Mãos</strong></p>
                 </div>
-                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8">
+                <div className="w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer">
                     <img src="esmaltacao-gel-pes.jpg" alt="" className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg" />
                     <p className="md:text-[15px]"><strong>Esmaltação em Gel - Pés</strong></p>
                 </div>
