@@ -63,7 +63,7 @@ export default function ConfirmarAgendamento() {
                 </header>
 
                 <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
-                    <div className="w-ful flex flex-col ml-[10px] justify-center items-center text-[20px]">
+                    <div className="w-full flex flex-col ml-[10px] justify-center items-center text-[20px]">
                         <span>
                             <strong>Serviço escolhido: {service} </strong>
                         </span>
