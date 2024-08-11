@@ -64,7 +64,7 @@ export default function ConfirmarAgendamento() {
 
             <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
                 <div className="w-full flex flex-col justify-center items-center text-[15px] md:text-[20px] ">
-                    <span className="min-w-[400px] md:w-[25%] border-2-transparent min-h-[200px] rounded-xl shadow-md flex flex-col items-start justify-center gap-4 px-[10px] bg-[#FDCCC5]">
+                    <span className="min-w-[330px] md:w-[25%] border-2-transparent min-h-[200px] rounded-xl shadow-md flex flex-col items-start justify-center gap-4 px-[10px] bg-[#FDCCC5]">
                         <div className="flex gap-4 items-center justify-center">
                             <Image src="/escolher.png" width={25} height={20} />
                             <p>{profissional}</p>
