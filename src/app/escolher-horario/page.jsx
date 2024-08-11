@@ -28,7 +28,9 @@ export default function EscolherHorario() {
             <header className="text-center">
                 <div className="flex flex-col items-center gap-8 mx-[15px]">
                     <h1 className="text-[19px]">
-                        <strong>MeTime</strong>
+                        <strong>
+                        <Link href="/">MeTime</Link>
+                        </strong>
                     </h1>
                     <Image src="/icon-passagem.png" width={100} height={50} alt="Icon" />
                     <span className="text-[22px]">
