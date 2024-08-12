@@ -18,9 +18,9 @@ export default function EscolherProfissional() {
 
     const profissionalSelected = (value) => {
         setProfissional(value);
-        setSelectedProfissional(value); 
+        setSelectedProfissional(value);
         localStorage.setItem('profissional', value);
-        
+
     };
 
     return (
@@ -29,7 +29,7 @@ export default function EscolherProfissional() {
                 <div className="flex flex-col items-center gap-8 mx-[15px]">
                     <h1 className="text-[19px]">
                         <strong>
-                        <Link href="/">MeTime</Link>
+                            <Link href="/">MeTime</Link>
                         </strong>
                     </h1>
                     <Image src="/icon-passagem3.png" width={100} height={50} alt="Icon" />

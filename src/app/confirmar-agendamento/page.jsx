@@ -71,7 +71,7 @@ export default function ConfirmarAgendamento() {
                         </div>
                         <div className="flex gap-4 items-center justify-center">
                             <Image src="/lixador-de-unha.png" width={25} height={20} />
-                             {services.join(', ')} 
+                            {services.join(', ')}
                         </div>
 
                         <div className="flex gap-6">
