@@ -41,7 +41,7 @@ export default function EscolherProfissional() {
 
             <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
                 {Object.keys(profissionalData).map((name) => (
-                    <div key={name} className={`w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer ${selectedProfissional === name ? 'border-4 border-[#867BEE] p-[0.5px] rounded-xl' : ''}`}
+                    <div key={name} className={`w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer ${selectedProfissional === name ? 'border-4 border-[#867BEE]  bg-[#867BEE] p-[0.5px] rounded-xl' : ''}`}
                         onClick={() => profissionalSelected(name)}>
                         <img src="/profissional.jpg" alt="Foto de Unhas" className="w-[100px] h-[100px] md:w-[150px] md:h-[200px] rounded-lg" />
                         <div className="w-full flex flex-col justify-end text-justify">

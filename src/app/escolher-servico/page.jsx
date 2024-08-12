@@ -57,7 +57,7 @@ export default function EscolherServico() {
                 {Object.keys(serviceImages).map((service) => (
                     <div
                         key={service}
-                        className={`w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer ${selectedServices.includes(service) ? 'border-4 border-[#867BEE] p-[0.5px] rounded-xl shadow-lg' : ''}`}
+                        className={`w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer ${selectedServices.includes(service) ? 'border-4 border-[#867BEE]  bg-[#867BEE] p-[0.5px] rounded-xl shadow-lg' : ''}`}
                         onClick={() => serviceSelected(service)}
                     >
                         <img

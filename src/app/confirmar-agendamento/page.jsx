@@ -56,7 +56,7 @@ export default function ConfirmarAgendamento() {
                         </strong>
                     </h1>
                     <Image src="/icon-passagem4.png" width={100} height={50} alt="Icon" />
-                    <span className="text-[18px] md:text-[22px]">
+                    <span className="text-[22px]">
                         <strong>Confirme seu agendamento:</strong>
                     </span>
                 </div>
@@ -89,7 +89,7 @@ export default function ConfirmarAgendamento() {
                     </button>
                 </div>
                 <div className="w-[50%] flex justify-start mt-[40px] md:mt-[100px] mb-[50px]">
-                    <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-black w-[100px] md:w-[150px] md:h-[50px] text-[15px] font-extrabold"
+                    <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[15px] font-extrabold"
                         onClick={agendamentoConfirmado}>
                         Agendar
                     </button>
