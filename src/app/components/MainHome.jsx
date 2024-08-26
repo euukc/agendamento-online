@@ -3,7 +3,6 @@ import { useRouter } from "next/router"
 
 export default function MainHome() {
 
-
     return (
         <main className="md:h-[560px] md:flex md:flex-col md:justify-center">
             <div className="flex flex-col justify-center items-center text-center mb-[40px]">

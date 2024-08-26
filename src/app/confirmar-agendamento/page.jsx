@@ -3,14 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useRouter } from 'next/navigation';
+
 
 export default function ConfirmarAgendamento() {
+    const router = useRouter();
+
     const [profissional, setProfissional] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('08:00');
     const [services, setServices] = useState([]);
 
     useEffect(() => {
+
         const storedProfissional = localStorage.getItem('profissional');
         const storedDate = localStorage.getItem('date');
         const storedTime = localStorage.getItem('time');
@@ -31,6 +36,8 @@ export default function ConfirmarAgendamento() {
     }, []);
 
     const agendamentoConfirmado = () => {
+
+
         if (!profissional || !date || !time || services.length === 0) {
             alert('Há informações não escolhidas. Por favor, verifique seu agendamento!');
         } else {
@@ -43,6 +50,10 @@ export default function ConfirmarAgendamento() {
             localStorage.removeItem('date');
             localStorage.removeItem('time');
             localStorage.removeItem('services');
+
+            setTimeout(() => {
+                router.push('/');
+            }, 350);
         }
     }
 

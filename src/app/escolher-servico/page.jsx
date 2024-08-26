@@ -9,7 +9,6 @@ export default function EscolherServico() {
     const [selectedServices, setSelectedServices] = useState([]);
 
     useEffect(() => {
-
         const storedServices = JSON.parse(localStorage.getItem('services')) || [];
         setSelectedServices(storedServices);
     }, []);

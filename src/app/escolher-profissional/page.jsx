@@ -20,7 +20,6 @@ export default function EscolherProfissional() {
         setProfissional(value);
         setSelectedProfissional(value);
         localStorage.setItem('profissional', value);
-
     };
 
     return (
