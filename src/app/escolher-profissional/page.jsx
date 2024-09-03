@@ -40,26 +40,26 @@ export default function EscolherProfissional() {
 
             <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
                 {Object.keys(profissionalData).map((name) => (
-                    <div key={name} className={`w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer ${selectedProfissional === name ? 'border-4 border-[#867BEE]  bg-[#867BEE] p-[0.5px] rounded-xl' : ''}`}
+                    <div key={name} className={`w-[80%] md:w-[150px] flex justify-start gap-2 items-center md:gap-8 flex-row md:flex-col cursor-pointer ${selectedProfissional === name ? 'bg-[#FDCCC5] p-[0.5px] rounded-xl' : ''}`}
                         onClick={() => profissionalSelected(name)}>
-                        <img src="/profissional.jpg" alt="Foto de Unhas" className="w-[100px] h-[100px] md:w-[150px] md:h-[200px] rounded-lg" />
+                        <img src="/profissional.jpg" alt="Foto de Unhas" className="w-[100px] h-[100px] md:w-[150px] md:h-[200px] rounded-[5px]" />
                         <div className="w-full flex flex-col justify-end text-justify">
-                            <p className="text-[15px] md:text-[15px]"><strong>{name}</strong></p>
-                            <p className="text-[13px] md:text-[15px]">Manicure Pé e Mão</p>
+                            <p className="text-[15px] md:text-[15px] text-center"><strong>{name}</strong></p>
+                            <p className="text-[13px] md:text-[15px] text-center">Manicure Pé e Mão</p>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="flex justify-center md:justify-center mt-[40px] md:mt-[100px] mb-[50px] gap-6 md:gap-[100px]">
-                <div className="w-[50%] flex justify-end mt-[40px] md:mt-[100px] mb-[50px]">
-                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#867BEE] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
-                        <Link href="/escolher-servico">Voltar</Link>
-                    </button>
-                </div>
-                <div className="w-[50%] flex justify-start mt-[40px] md:mt-[100px] mb-[50px]">
+            <div className="flex flex-col items-center justify-center mt-[40px] md:mt-[100px] mb-[50px] gap-6 md:gap-2">
+                <div className="mt-[40px]">
                     <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
                         <Link href="/confirmar-agendamento">Próximo</Link>
+                    </button>
+                </div>
+                <div className="mb-[50px]">
+                    <button className="text-black w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
+                        <Link href="/escolher-servico">Voltar</Link>
                     </button>
                 </div>
             </div>

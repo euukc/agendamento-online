@@ -93,13 +93,13 @@ export default function ConfirmarAgendamento() {
                 </div>
             </div>
 
-            <div className="flex justify-center items-center mx-[20px] gap-4 md:gap-[100px]">
-                <div className="w-[50%] flex justify-end mt-[40px] md:mt-[100px] mb-[50px]">
-                    <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#867BEE] text-white w-[100px] md:w-[150px] md:h-[50px] text-[15px] font-extrabold">
+            <div className="flex flex-col-reverse justify-center items-center mx-[20px] mt-10">
+                <div className="flex">
+                    <button className="text-black text-[15px] font-extrabold">
                         <Link href="/escolher-profissional">Voltar</Link>
                     </button>
                 </div>
-                <div className="w-[50%] flex justify-start mt-[40px] md:mt-[100px] mb-[50px]">
+                <div className="flex mb-[50px] mt-10">
                     <button className="border-2 border-transparent p-[10px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[15px] font-extrabold"
                         onClick={agendamentoConfirmado}>
                         Agendar

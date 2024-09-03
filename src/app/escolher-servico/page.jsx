@@ -56,7 +56,7 @@ export default function EscolherServico() {
                 {Object.keys(serviceImages).map((service) => (
                     <div
                         key={service}
-                        className={`w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer ${selectedServices.includes(service) ? 'border-4 border-[#867BEE]  bg-[#867BEE] p-[0.5px] rounded-xl shadow-lg' : ''}`}
+                        className={`w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer ${selectedServices.includes(service) ? 'bg-[#FDCCC5] p-[0.5px] rounded-xl shadow-xl' : ''}`}
                         onClick={() => serviceSelected(service)}
                     >
                         <img
@@ -64,20 +64,20 @@ export default function EscolherServico() {
                             alt={`Foto de ${service}`}
                             className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg"
                         />
-                        <p className="md:text-[15px]"><strong>{service}</strong></p>
+                        <p className="md:text-[15px] text-center"><strong>{service}</strong></p>
                     </div>
                 ))}
             </div>
 
-            <div className="flex justify-center md:justify-center mt-[40px] md:mt-[100px] mb-[50px] gap-6 md:gap-[100px]">
-                <div className="w-[50%] flex justify-end mt-[40px] md:mt-[100px] mb-[50px]">
-                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#867BEE] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
-                        <Link href="/escolher-horario">Voltar</Link>
-                    </button>
-                </div>
-                <div className="w-[50%] flex justify-start mt-[40px] md:mt-[100px] mb-[50px]">
+            <div className="flex flex-col items-center justify-center mt-[40px] md:mt-[100px] mb-[50px] gap-6 md:gap-2">
+                <div className="mt-[40px]">
                     <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
                         <Link href="/escolher-profissional">Próximo</Link>
+                    </button>
+                </div>
+                <div className="mb-[50px]">
+                    <button className="text-black w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
+                        <Link href="/escolher-horario">Voltar</Link>
                     </button>
                 </div>
             </div>
