@@ -4,8 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function EscolherServico() {
-
+const EscolherServico = () => {
     const [selectedServices, setSelectedServices] = useState([]);
 
     useEffect(() => {
@@ -37,50 +36,54 @@ export default function EscolherServico() {
     }
 
     return (
-        <main className="w-full h-min-screen flex flex-col justify-center mt-10">
+        <main className="w-full min-h-screen flex flex-col justify-center mt-10">
             <header className="text-center">
-                <div className="flex flex-col items-center gap-8 mx-[15px]">
-                    <h1 className="text-[19px]">
-                        <strong>
-                            <Link href="/">MeTime</Link>
-                        </strong>
+                <div className="flex flex-col items-center gap-4 mx-4">
+                    <h1 className="text-2xl font-bold">
+                        <Link href="/">MeTime</Link>
                     </h1>
                     <Image src="/icon-passagem2.png" width={100} height={50} alt="Icon" />
-                    <span className="text-[22px]">
-                        <strong>Por favor, escolha um serviço:</strong>
-                    </span>
+                    <span className="text-xl font-semibold">Por favor, escolha um serviço:</span>
                 </div>
             </header>
 
-            <div className="w-full flex justify-center gap-10 md:gap-16 flex-wrap items-center mt-[40px] md:mt-[100px] text-[13px]">
+            <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 px-4">
                 {Object.keys(serviceImages).map((service) => (
                     <div
                         key={service}
-                        className={`w-[30%] md:w-[150px] flex justify-center items-center flex-col gap-2 md:gap-8 cursor-pointer ${selectedServices.includes(service) ? 'bg-[#FDCCC5] p-[0.5px] rounded-xl shadow-xl' : ''}`}
+                        className={`relative w-full cursor-pointer p-2 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 ease-in-out ${selectedServices.includes(service) ? 'bg-[#FDCCC5] shadow-xl' : 'bg-white'}`}
                         onClick={() => serviceSelected(service)}
                     >
                         <img
                             src={serviceImages[service]}
                             alt={`Foto de ${service}`}
-                            className="w-[120px] h-[90px] md:w-[150px] md:h-[200px] rounded-lg"
+                            className="w-full h-[150px] md:h-[200px] object-cover rounded-lg"
                         />
-                        <p className="md:text-[15px] text-center"><strong>{service}</strong></p>
+                        <p className="text-center mt-2 text-sm font-medium">{service}</p>
+                        {selectedServices.includes(service) && (
+                            <div className="absolute top-2 right-2 bg-white text-green-600 rounded-full p-1 shadow-sm">
+                                &#10003;
+                            </div>
+                        )}
                     </div>
                 ))}
-            </div>
+            </section>
 
-            <div className="flex flex-col items-center justify-center mt-[40px] md:mt-[100px] mb-[50px] gap-6 md:gap-2">
-                <div className="mt-[40px]">
-                    <button className="border-2 border-transparent p-[5px] rounded-lg bg-[#FDCCC5] text-white w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
-                        <Link href="/escolher-profissional">Próximo</Link>
+            <footer className="flex flex-col items-center justify-center mt-12 gap-4">
+                <Link href="/escolher-profissional">
+                    <button className="bg-[#FDCCC5] text-white w-32 h-12 font-bold rounded-lg shadow-lg hover:bg-[#fca39b] transition-colors">
+                        Próximo
                     </button>
-                </div>
-                <div className="mb-[50px]">
-                    <button className="text-black w-[100px] md:w-[150px] md:h-[50px] text-[13px] font-extrabold">
-                        <Link href="/escolher-horario">Voltar</Link>
+                </Link>
+
+                <Link href="/escolher-horario">
+                    <button className="text-black w-32 h-12 font-bold border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 transition-colors">
+                        Voltar
                     </button>
-                </div>
-            </div>
+                </Link>
+            </footer>
         </main>
     );
-}
+};
+
+export default EscolherServico;
