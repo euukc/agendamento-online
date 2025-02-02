@@ -1,8 +1,8 @@
 "use client"
 
 import React, { useState } from 'react';
-import HeaderHome from './components/HeaderHome';
-import MainHome from './components/MainHome';
+import HeaderHome from '../components/HeaderHome';
+import MainHome from '../components/MainHome';
 
 
 const HomePage = () => {

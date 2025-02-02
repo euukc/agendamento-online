@@ -70,7 +70,7 @@ const EscolherServico = () => {
             </section>
 
             <footer className="flex flex-col items-center justify-center mt-12 gap-4">
-                <Link href="/escolher-profissional">
+                <Link href="/confirmar-agendamento">
                     <button className="bg-[#FDCCC5] text-white w-32 h-12 font-bold rounded-lg shadow-lg hover:bg-[#fca39b] transition-colors">
                         Próximo
                     </button>

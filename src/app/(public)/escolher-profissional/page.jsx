@@ -37,7 +37,7 @@ const EscolherProfissional = () => {
                         className={`relative w-full cursor-pointer p-4 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 ease-in-out ${selectedProfissional === name ? 'bg-[#FDCCC5] shadow-xl' : 'bg-white'}`}
                         onClick={() => profissionalSelected(name)}
                     >
-                        <img
+                        <img                            
                             src={profissionalData[name]}
                             alt={`Foto de ${name}`}
                             className="w-full h-[200px] object-cover rounded-lg"
@@ -54,13 +54,13 @@ const EscolherProfissional = () => {
             </section>
 
             <footer className="flex flex-col items-center justify-center mt-12 gap-4">
-                <Link href="/confirmar-agendamento">
+                <Link href="/escolher-servico">
                     <button className="bg-[#FDCCC5] text-white w-32 h-12 font-bold rounded-lg shadow-lg hover:bg-[#fca39b] transition-colors">
                         Próximo
                     </button>
                 </Link>
 
-                <Link href="/escolher-servico">
+                <Link href="/cliente-info">
                     <button className="text-black w-32 h-12 font-bold border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 transition-colors">
                         Voltar
                     </button>
